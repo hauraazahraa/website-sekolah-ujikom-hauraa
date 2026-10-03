@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class ProfilSekolah extends Model
+{
+    protected $table = 'profil_sekolahs';
+
+    protected $fillable = [
+        'alamat',
+        'telepon',
+        'email',
+        'visi',
+        'misi',
+        'akreditasi',
+        'instagram',
+        'facebook',
+        'twitter',
+        'youtube',
+        'tiktok',
+    ];
+}
