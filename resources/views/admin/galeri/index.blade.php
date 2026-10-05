@@ -54,6 +54,10 @@
                   <label>Judul</label>
                   <input type="text" name="judul" value="{{ $item->judul }}" required>
                 </div>
+                <div class="admin-form-group">
+                  <label>Caption (opsional)</label>
+                  <textarea name="caption" rows="3" maxlength="500">{{ $item->caption }}</textarea>
+                </div>
                 <div class="admin-form-row">
                   <div class="admin-form-group">
                     <label>Kategori</label>
@@ -99,6 +103,10 @@
             <div class="admin-form-group">
               <label>Judul</label>
               <input type="text" name="judul" required>
+            </div>
+            <div class="admin-form-group">
+              <label>Caption (opsional)</label>
+              <textarea name="caption" rows="3" maxlength="500"></textarea>
             </div>
             <div class="admin-form-row">
               <div class="admin-form-group">

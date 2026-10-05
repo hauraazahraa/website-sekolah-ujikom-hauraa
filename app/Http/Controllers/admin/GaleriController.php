@@ -26,7 +26,8 @@ class GaleriController extends Controller
             'judul' => ['required', 'string', 'max:255'],
             'kategori' => ['required', 'in:kegiatan,prestasi'],
             'tanggal' => ['required', 'date'],
-            'foto' => ['required', 'image', 'max:10240'], // maks 10MB
+            'foto' => ['required', 'image', 'max:10240'],
+            'caption' => 'nullable|string|max:500',// maks 10MB
         ]);
 
         $data['foto'] = $request->file('foto')->store('galeri', 'public');
@@ -42,7 +43,8 @@ class GaleriController extends Controller
             'judul' => ['required', 'string', 'max:255'],
             'kategori' => ['required', 'in:kegiatan,prestasi'],
             'tanggal' => ['required', 'date'],
-            'foto' => ['nullable', 'image', 'max:10240'], // maks 10MB
+            'foto' => ['nullable', 'image', 'max:10240'],
+            'caption' => 'nullable|string|max:500', // maks 10MB
         ]);
 
         if ($request->hasFile('foto')) {

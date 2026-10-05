@@ -1071,3 +1071,66 @@
 @media (max-width: 575.98px) {
   .admin-topbar-search { display: none; }
 }
+
+.admin-form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+@media (max-width: 991.98px) {
+
+  /* judul dan tombol: boleh turun ke baris baru */
+  .admin-page-head {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .admin-page-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .admin-page-actions .admin-search {
+    flex: 1 1 100%;
+    min-width: 0;
+  }
+
+  .admin-page-actions .admin-search input {
+    width: 100%;
+  }
+
+  .admin-page-actions .admin-btn-primary {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+
+  /* kartu tabel: bisa digeser ke samping */
+  .admin-card {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .admin-table {
+    min-width: 560px;
+  }
+
+  /* tombol Edit dan Hapus sejajar */
+  .admin-table-actions {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  /* footer "Menampilkan 1-5 dari 5 data" */
+  .admin-table-footer {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

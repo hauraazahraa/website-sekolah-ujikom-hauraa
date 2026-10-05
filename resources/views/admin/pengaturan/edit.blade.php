@@ -47,7 +47,7 @@
           <input type="number" name="stat_siswa" min="0" value="{{ old('stat_siswa', $pengaturan->stat_siswa) }}" required>
         </div>
         <div class="admin-form-group">
-          <label>Guru Profesional</label>
+          <label>Guru dan Staff</label>
           <input type="number" name="stat_guru" min="0" value="{{ old('stat_guru', $pengaturan->stat_guru) }}" required>
         </div>
       </div>

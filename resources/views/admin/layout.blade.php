@@ -53,12 +53,6 @@
 
       <div class="admin-sidebar-footer">
         <a href="{{ route('admin.help-center.index') }}" class="admin-menu-item {{ request()->routeIs('admin.help-center.*') ? 'active' : '' }}"><i class="bi bi-question-circle"></i> Help Center</a>
-        <form method="POST" action="{{ route('logout') }}">
-          @csrf
-          <button type="submit" class="admin-menu-item admin-logout">
-            <i class="bi bi-box-arrow-right"></i> Logout
-          </button>
-        </form>
       </div>
     </aside>
 
@@ -73,7 +67,6 @@
           <input type="text" placeholder="Cari...">
         </div>
         <div class="admin-topbar-right">
-          <i class="bi bi-bell"></i>
 
           <div class="admin-profile-menu" id="adminProfileMenu">
             <button type="button" class="admin-avatar-btn" id="adminProfileToggle" aria-label="Menu profil">

@@ -123,7 +123,7 @@
           </div>
           <div class="stat-item">
             <span class="stat-number" data-purecounter-start="0" data-purecounter-end="80" data-purecounter-duration="1" class="purecounter">80</span>
-            <span class="stat-label">Guru Profesional</span>
+            <span class="stat-label">Guru dan Staff</span>
           </div>
           <div class="stat-item">
             <span class="stat-number" data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1" class="purecounter">30</span>
@@ -204,10 +204,16 @@
         <div class="row g-4" data-aos="fade-up" data-aos-delay="150">
           @forelse ($galeriFotos ?? [] as $foto)
             <div class="col-md-4 gallery-item" data-category="{{ $foto->kategori }}">
-              <div class="gallery-preview-img">
-                <img src="{{ $foto->fotoUrl() }}" alt="{{ $foto->judul }}">
-              </div>
-            </div>
+  <div class="gallery-preview-img">
+    <a href="{{ $foto->fotoUrl() }}"
+   class="glightbox"
+   data-gallery="galeri"
+   data-title="{{ $foto->judul }}"
+   data-description="{{ $foto->caption }}">
+  <img src="{{ $foto->fotoUrl() }}" alt="{{ $foto->judul }}">
+</a>
+  </div>
+</div>
           @empty
             <div class="col-12">
               <p class="text-center" style="color: var(--sm-ink-soft);">Belum ada foto galeri. Tambahkan lewat halaman admin.</p>
